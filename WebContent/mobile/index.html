@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Agile Lite微信演示</title>
+		<meta http-equiv="pragma" content="no-cache"  />
+		<meta http-equiv="content-type" content="no-cache, must-revalidate" />
+		<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+		<link rel="stylesheet" href="agile/css/agile.layout.css">
+		<link rel="stylesheet" href="agile/css/flat/flat.component.css">
+		<link rel="stylesheet" href="agile/css/flat/flat.color.css">
+		<link rel="stylesheet" href="agile/css/flat/iconline.css">
+		<link rel="stylesheet" href="agile/css/flat/iconlogo.css">
+		<style type="text/css">
+			.api_test_button{
+
+			}
+		</style>
+		<!--<link rel="stylesheet" href="app/css/style.css">-->
+	</head>
+	<body>
+		<div id="aside_container">
+			<aside id="weixin_title_right_reveal_aside" data-position="right" data-role="aside" data-transition="reveal" style="background-color: #ffffff;  overflow-y: scroll;color: #000000;">
+				<div class="scroller">
+					<ul class="listitem">
+						<li class="menu_li" data-href="#menu-basic">
+							<div class="text">
+								<a >基础接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-share">
+							<div class="text">
+								<a >分享接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-image">
+							<div class="text">
+								<a>图像接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-voice">
+							<div class="text">
+								<a>音频接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-smart">
+							<div class="text">
+								<a>智能接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-device">
+							<div class="text">
+								<a>设备信息接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-location">
+							<div class="text">
+								<a>地理位置接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-webview">
+							<div class="text">
+								<a>界面操作接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-scan">
+							<div class="text">
+								<a>微信扫一扫接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-shopping">
+							<div class="text">
+								<a>微信小店接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-card">
+							<div class="text">
+								<a>微信卡券接口</a>
+							</div>
+						</li>
+						<li class="menu_li" data-href="#menu-pay">
+							<div class="text">
+								<a>微信支付接口</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+
+		<div id="section_container">
+			<section id="weixin_demo_section" class="active" data-role="section" >
+				<header id="header">
+					<div class="titlebar">
+						<h1 class="title white">ExMobi-Weixin</h1>
+						<a data-toggle="aside" href="#weixin_title_right_reveal_aside"><i class="iconfont iconline-list"></i></a>
+					</div>
+				</header>
+
+				<article id="weixin_demo_article" class="active" data-role="article"  data-scroll="verticle" style="top:44px;bottom:0px;">
+					<div class="scroller">
+						<ul class="listitem">
+
+							<li class="sliver" id="menu-basic">
+								基础接口
+							</li>
+							<li id="checkJsApi">
+								<div class="text">
+									<span class="desc">checkJsApi<small>判断当前客户端是否支持指定JS接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="checkJsApi">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-share">
+								分享接口
+							</li>
+							<li id="onMenuShareTimeline">
+								<div class="text">
+									<span class="desc">onMenuShareTimeline<small>获取“分享到朋友圈”按钮点击状态及自定义分享内容接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="onMenuShareTimeline">
+									开始
+								</button>-->
+							</li>
+							<li id="onMenuShareAppMessage">
+								<div class="text">
+									<span class="desc">onMenuShareAppMessage<small>获取“分享给朋友”按钮点击状态及自定义分享内容接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="onMenuShareAppMessage">
+									开始
+								</button>-->
+							</li>
+							<li id="onMenuShareQQ">
+								<div class="text">
+									<span class="desc">onMenuShareQQ<small>获取“分享到QQ”按钮点击状态及自定义分享内容接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="onMenuShareQQ">
+									开始
+								</button>-->
+							</li>
+							<li id="onMenuShareWeibo">
+								<div class="text">
+									<span class="desc">onMenuShareWeibo<small>获取“分享到腾讯微博”按钮点击状态及自定义分享内容接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="onMenuShareWeibo">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-image">
+								图像接口
+							</li>
+							<li id="chooseImage">
+								<div class="text">
+									<span class="desc">chooseImage<small>拍照或从手机相册中选图接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="chooseImage">
+									开始
+								</button>-->
+							</li>
+							<li id="previewImage">
+								<div class="text">
+									<span class="desc">previewImage<small>预览图片接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="previewImage">
+									开始
+								</button>-->
+							</li>
+							<li id="uploadImage">
+								<div class="text">
+									<span class="desc">uploadImage<small>上传图片接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="uploadImage">
+									开始
+								</button>-->
+							</li>
+							<li id="downloadImage">
+								<div class="text">
+									<span class="desc">downloadImage<small>下载图片接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="downloadImage">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-voice">
+								音频接口
+							</li>
+							<li id="startRecord">
+								<div class="text">
+									<span class="desc">startRecord<small>开始录音接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="startRecord">
+									开始
+								</button>-->
+							</li>
+							<li id="stopRecord">
+								<div class="text">
+									<span class="desc">stopRecord<small>停止录音接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="stopRecord">
+									开始
+								</button>-->
+							</li>
+							<li id="playVoice">
+								<div class="text">
+									<span class="desc">playVoice<small>播放语音接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="playVoice">
+									开始
+								</button>-->
+							</li>
+							<li id="pauseVoice">
+								<div class="text">
+									<span class="desc">pauseVoice<small>暂停播放接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="pauseVoice">
+									开始
+								</button>-->
+							</li>
+							<li id="stopVoice">
+								<div class="text">
+									<span class="desc">stopVoice<small>停止播放接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="stopVoice">
+									开始
+								</button>-->
+							</li>
+							<li id="uploadVoice">
+								<div class="text">
+									<span class="desc">uploadVoice<small>上传语音接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="uploadVoice">
+									开始
+								</button>-->
+							</li>
+							<li id="downloadVoice">
+								<div class="text">
+									<span class="desc">downloadVoice<small>下载语音接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="downloadVoice">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-smart">
+								智能接口
+							</li>
+							<li id="translateVoice">
+								<div class="text">
+									<span class="desc">translateVoice<small>识别音频并返回识别结果接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="translateVoice">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-device">
+								设备信息接口
+							</li>
+							<li id="getNetworkType">
+								<div class="text">
+									<span class="desc">getNetworkType<small>获取网络状态接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="getNetworkType">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-location">
+								地理位置接口
+							</li>
+							<li id="openLocation">
+								<div class="text">
+									<span class="desc">openLocation<small>使用微信内置地图查看位置接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="openLocation">
+									开始
+								</button>-->
+							</li>
+							<li id="getLocation">
+								<div class="text">
+									<span class="desc">getLocation<small>获取地理位置接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="getLocation">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-webview">
+								界面操作接口
+							</li>
+							<li id="hideOptionMenu">
+								<div class="text">
+									<span class="desc">hideOptionMenu<small>隐藏右上角菜单接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="hideOptionMenu">
+									开始
+								</button>-->
+							</li>
+							<li id="showOptionMenu">
+								<div class="text">
+									<span class="desc">showOptionMenu<small>显示右上角菜单接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="showOptionMenu">
+									开始
+								</button>-->
+							</li>
+							<li id="closeWindow">
+								<div class="text">
+									<span class="desc">closeWindow<small>关闭当前网页窗口接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="closeWindow">
+									开始
+								</button>-->
+							</li>
+							<li id="hideMenuItems">
+								<div class="text">
+									<span class="desc">hideMenuItems<small>批量隐藏功能按钮接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="hideMenuItems">
+									开始
+								</button>-->
+							</li>
+							<li id="showMenuItems">
+								<div class="text">
+									<span class="desc">showMenuItems<small>批量显示功能按钮接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="showMenuItems">
+									开始
+								</button>-->
+							</li>
+							<li id="hideAllNonBaseMenuItem">
+								<div class="text">
+									<span class="desc">hideAllNonBaseMenuItem<small>隐藏所有非基础按钮接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="hideAllNonBaseMenuItem">
+									开始
+								</button>-->
+							</li>
+							<li id="showAllNonBaseMenuItem">
+								<div class="text">
+									<span class="desc">showAllNonBaseMenuItem<small>显示所有功能按钮接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="showAllNonBaseMenuItem">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-scan">
+								微信扫一扫
+							</li>
+							<li id="scanQRCode0">
+								<div class="text">
+									<span class="desc">scanQRCode(微信处理结果)<small>调起微信扫一扫接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="scanQRCode0">
+									开始
+								</button>-->
+							</li>
+							<li id="scanQRCode1">
+								<div class="text">
+									<span class="desc">scanQRCode(直接返回结果)<small>调起微信扫一扫接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="scanQRCode1">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-shopping">
+								微信小店接口
+							</li>
+							<li id="openProductSpecificView">
+								<div class="text">
+									<span class="desc">openProductSpecificView<small>跳转微信商品页接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="openProductSpecificView">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-card">
+								微信卡券接口
+							</li>
+							<li id="addCard">
+								<div class="text">
+									<span class="desc">addCard<small>批量添加卡券接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="addCard">
+									开始
+								</button>-->
+							</li>
+							<li id="chooseCard">
+								<div class="text">
+									<span class="desc">chooseCard<small>调起适用于门店的卡券列表并获取用户选择列表</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="chooseCard">
+									开始
+								</button>-->
+							</li>
+							<li id="openCard">
+								<div class="text">
+									<span class="desc">openCard<small>查看微信卡包中的卡券接口</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="openCard">
+									开始
+								</button>-->
+							</li>
+
+							<li class="sliver" id="menu-pay">
+								微信支付接口
+							</li>
+							<li id="chooseWXPay">
+								<div class="text">
+									<span class="desc">chooseWXPay<small>发起一个微信支付请求</small></span>
+								</div>
+								<!--
+								<button class="api_test_button" id="chooseWXPay">
+									开始
+								</button>-->
+						</ul>
+					</div>
+				</article>
+
+			</section>
+
+		</div>
+		<!--- third --->
+		<script type="text/javascript" src="third/jquery/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="third/jquery/jquery.mobile.custom.min.js"></script>
+		<script type="text/javascript" src="third/iscroll/iscroll-probe.js"></script>
+		<script type="text/javascript" src="third/arttemplate/template-native.js"></script>
+		<!-- agile -->
+		<script type="text/javascript" src="agile/js/agile.js"></script>
+		<!-- app -->
+		<script type="text/javascript" src="app/js/app.js"></script>
+		
+
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="app/js/weixin.exmobi.js"></script>
+		<script type="text/javascript" src="app/js/demo.js"></script>
+
+		<script>
+			$weixin.init({
+				configUrl : "../weixinconfig",
+				uploadUrl : "../weixinupload"
+			});
+
+			$("#weixin_demo_article").on("articleload",function(){
+				$("#weixin_demo_article").on("swipeleft",function(){
+					A.Controller.aside('#weixin_title_right_reveal_aside');
+				});
+			});
+		</script>
+
+	</body>
+</html>

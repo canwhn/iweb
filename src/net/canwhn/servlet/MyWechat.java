@@ -49,6 +49,10 @@ public class MyWechat extends WechatSupport {
 			responseText("测试信息是否可保存到数据库!<a href=\"http://isino.ngrok.cc/iweb/index.jsp\">信息收集</a>");
 		}
 		else if(content.equals("3")){
+			
+			responseText("Agile Lite!<a href=\"http://isino.ngrok.cc/iweb/mobile/index.html\">Agile Lite</a>");
+		}
+		else if(content.equals("4")){
 			responseNew("Canwhn's Studio", "welcome to canwhn's studio", "http://7fvkic.com1.z0.glb.clouddn.com/birdsofprey1.jpg", 
 					"http://canwhn.sourceforge.net");
 		}
@@ -91,7 +95,13 @@ public class MyWechat extends WechatSupport {
 				default:
 					break;
 			}
-			responseText(entity.getText());
+			String msg = entity.getText();
+			if(msg.length()>50){
+				responseText(entity.getText().substring(0, 50));
+			}else{
+				responseText(entity.getText());
+			}
+			
 			JdbcUtils jdbcUtils = new JdbcUtils();
 			jdbcUtils.getConnection();
 
