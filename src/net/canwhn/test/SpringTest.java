@@ -1,4 +1,4 @@
-package com.tgb.test;
+package net.canwhn.test;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

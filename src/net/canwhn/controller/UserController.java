@@ -1,4 +1,4 @@
-package com.tgb.controller;
+package net.canwhn.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,8 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.tgb.model.User;
-import com.tgb.service.UserService;
+import net.canwhn.bean.User;
+import net.canwhn.service.UserService;
+
 
 @Controller
 @RequestMapping("/user")

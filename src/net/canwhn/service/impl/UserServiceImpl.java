@@ -1,4 +1,4 @@
-package com.tgb.service.impl;
+package net.canwhn.service.impl;
 
 import java.util.List;
 
@@ -7,9 +7,10 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tgb.mapper.UserMapper;
-import com.tgb.model.User;
-import com.tgb.service.UserService;
+import net.canwhn.bean.User;
+import net.canwhn.mapper.UserMapper;
+import net.canwhn.service.UserService;
+
 
 
 

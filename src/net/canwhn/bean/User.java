@@ -1,4 +1,4 @@
-package com.tgb.model;
+package net.canwhn.bean;
 
 /**
  * 用户

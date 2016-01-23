@@ -1,8 +1,9 @@
-package com.tgb.mapper;
+package net.canwhn.mapper;
 
 import java.util.List;
 
-import com.tgb.model.User;
+import net.canwhn.bean.User;
+
 
 public interface UserMapper {
 

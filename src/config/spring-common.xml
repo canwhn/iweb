@@ -35,7 +35,7 @@
 		basePackage:指定sql映射文件/接口所在的包（自动扫描）
 	-->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.tgb.mapper"></property>
+		<property name="basePackage" value="net.canwhn.mapper"></property>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
 

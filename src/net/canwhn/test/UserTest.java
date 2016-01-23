@@ -1,4 +1,4 @@
-package com.tgb.test;
+package net.canwhn.test;
 
 
 import java.util.List;
@@ -9,8 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.tgb.mapper.UserMapper;
-import com.tgb.model.User;
+import net.canwhn.bean.User;
+import net.canwhn.mapper.UserMapper;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/config/spring-common.xml")
