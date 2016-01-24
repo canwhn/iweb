@@ -11,7 +11,7 @@ public class User {
 	private String age;
 	private String userName;
 	public User(){
-		super();
+		//super();
 	}
 	public int getId() {
 		return id;

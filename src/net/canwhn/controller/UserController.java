@@ -2,14 +2,22 @@ package net.canwhn.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 
 import net.canwhn.bean.User;
 import net.canwhn.service.UserService;
@@ -65,7 +73,7 @@ public class UserController {
 	 * @return
 	 */
 	@RequestMapping("/updateUser")
-	public String updateUser(User user,HttpServletRequest request){
+	public String updateUser(@ModelAttribute("user") User user,HttpServletRequest request){
 		
 		
 		if(userService.update(user)){
@@ -112,4 +120,96 @@ public class UserController {
 		}
 
 	}
+	
+	/**
+	 * 获取所有用户列表
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/getAllUserList")
+	public void getAllUserList(HttpServletRequest request,HttpServletResponse response){
+		
+		List<User> findAll = userService.findAll();
+		Map map = new HashMap();
+		map.put("list", findAll);
+		String result = JSON.toJSONString(map);
+		
+		response.setContentType("application/json");
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.write(result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	} 
+	
+	/**
+	 * 获取所有用户列表
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/getAllUserListDemoOne")
+	public void getAllUserListDemo1(HttpServletRequest request,HttpServletResponse response,@RequestBody User user){
+		
+		List<User> findAll = userService.findAll();
+		Map map = new HashMap();
+		map.put("list", findAll);
+		String result = JSON.toJSONString(map);
+		
+		response.setContentType("application/json");
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.write(result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@RequestMapping("/getAllUserListDemoOneOne")
+	public void getAllUserListDemoOneOne(@RequestBody User user){
+		System.out.println("Ok.....");
+	}
+	
+	@RequestMapping("/getAllUserListDemoTwo")
+	public void getAllUserListDemo1_1(HttpServletRequest request,HttpServletResponse response,@RequestBody List<User> users){
+		
+		List<User> findAll = userService.findAll();
+		Map map = new HashMap();
+		map.put("list", findAll);
+		String result = JSON.toJSONString(map);
+		
+		response.setContentType("application/json");
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.write(result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	} 
+	
+	/**
+	 * 获取所有用户列表
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="/getAllUserListDemoThree")
+	public void getAllUserListDemo2(@ModelAttribute("user") User user,HttpServletRequest request,HttpServletResponse response){
+		
+		List<User> findAll = userService.findAll();
+		Map map = new HashMap();
+		map.put("list", findAll);
+		String result = JSON.toJSONString(map);
+		
+		response.setContentType("application/json");
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.write(result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	} 
 }
